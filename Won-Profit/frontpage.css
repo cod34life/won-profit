@@ -15,7 +15,7 @@ header{
 
 .top{
 	position: absolute;
-	width: 1500px;
+	width: auto;
 	margin-left: 0;
 	margin-top: 0 ;
 }
