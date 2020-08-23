@@ -6,10 +6,10 @@ if(isset($_POST["amount"]) && isset($_POST["nps"]))
 {
 	$sup = $_POST["nps"];
 	$value = $_POST["amount"];
-	$stmt = $db->prepare("INSERT INTO users (nps, dons) VALUES (:np, :don) WHERE email=$email") ;
-    $stmt->execute(array(
-						":np" => $sup,
-						":don" => $value));
+	$stmt = $db->prepare("UPDATE users SET nps = :np, dons = :don WHERE email = :em") ;
+    $stmt->execute(array(":em" => $email,
+			":np" => $sup,
+			":don" => $value));
 }
 else
 {
