@@ -3,7 +3,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <style type="text/css">
-
 body {
   background-color: #FFE5B4
 }
@@ -42,10 +41,9 @@ input[type=submit]:hover {
   background-color:#7CFC00;
 }
 
-</style>
 
 <body>
-   <center><a href="https://ibb.co/cL1vGmB"><img src="https://i.ibb.co/gV375n2/kindpng-7893485.png" alt="kindpng-7893485" border="0"></a></center>
+ <center><a href="https://ibb.co/cL1vGmB"><img src="https://i.ibb.co/gV375n2/kindpng-7893485.png" alt="kindpng-7893485" border="0"></a></center>
   <h1><center>Tell Us About Yourself</center></h1>
   <form action="/nonprofits.php">
     
@@ -82,6 +80,5 @@ input[type=submit]:hover {
     
     <center><input type="submit" value="Submit"></center>
 </form> 
-  
-<script type="text/javascript">
-</script>
+    </body>
+  </html>
