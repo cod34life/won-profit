@@ -1,38 +1,40 @@
+function isValid(){
+var pwd = document.getElementById('password').value;
+let lower = /[a-z]/
+let upper = /[A-Z]/
+let num = /[0-9]/
 
-let message = document.getElementById("password");
-showMessage.onfocus = function() { document.getElementById("message").style.display ="block";
+if(pwd.length<10) {
+  alert("Password needs to be at least 10 characters")
 }
-
-function validate() { 
-   let good; 
-   let str=document.getElementById("password").value; 
-    if (str.length>= 10 && str.match(/[a-zA-Z]/g) && str.match(/[0-9]/g) {
-    good = true
-    }
-else {
-  good = false
-  console.log("Password must contain\n
-              "•At least ten characters\n"
-              "•One capital letter\n"
-              "•One lowercase letter\n
-              "•One number")
+if(!pwd.test(lower)) {
+  alert("Password must contain at least one lowercase letter")
+  return false
+}
+if(!pwd.test(upper)) {
+  alert("Password must contain at least one uppercase letter")
+  return false
+}
+if(!pwd.test(num)) {
+  alert("Password must contain at least one digit")
+  return false
 }
 
 function checkCheck(group, max){
-	let group = group
-	var max = max
-	for (let i=0; i<group.length; i++){
-		checkgroup[i].onclick=function(){
-		let count=0
-		for (let i=0; i<group.length; i++)
-			count+=(group[i].checked)?1:0
-		if (count>max){
-			alert("Only select up to "+ max+ " checkboxes.")
-			this.checked=false
-			}
-		}
-	}
+  for (let i=0; i<group.length; i++){
+    group[i].addEventListener('click',function(){
+      let count=0
+      for (let i=0; i<group.length; i++)
+      {
+        count+=(group[i].checked)? 1 : 0
+        if (count>max)
+        {
+          alert("Can only pick up to" + max + "choices")
+          this.checked=false
+        }
+      }
+    })
+  }
 }
- document.getElementById("SUBMIT").onclick = function () {
-   location.href = "nonprofits.php";
-  };
+
+ checkCheck(document.forms.checklist.interests, 3)
