@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Won-Profit</title>
+	<link rel="stylesheet" type="text/css" href="content/frontpage.css">
+</head>
+<body>
+     <header>
+     	<div class="top">
+     	     <h1>Welcome to Won-Profit</h1>
+        </div>
+         <div class="tagline">
+         	<h2>The nonprofits receives your donation and you get the chance to donate to causes that you care about</h2>
+         	<div class="Donate">
+         		<a href="interest.php" class="bttn" >Donate now</a>
+            </div>
+         </div>   
+     </header>
+</body>
+</html>

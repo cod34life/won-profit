@@ -1,5 +1,6 @@
 <!--DOCTYPE html-->
 <html>
+<title>Donation Allocation</title>
 <style type="text/css">
 .button {
 	background-color: #DC143C;
@@ -36,18 +37,21 @@
 </h1>
 
 <center>
-	<label for="fname">How many nonprofits will you be donating to?</label><br>
-	<button class="button">One</button>
-	&nbsp&nbsp
-	<button class="button">Two</button>
-	&nbsp&nbsp
-	<button class="button">Three</button>
-	&nbsp&nbsp <br>
+	<form method="post" action="paypal.php">
+	<p>How many nonprofits will you be donating to?</p>
+  <input type="radio" id="1" name="nps" value="1">
+  <label class="button" for="1">1</label> &nbsp &nbsp
+  <input type="radio" id="2" name="nps" value="2">
+  <label class="button" for="2">2</label>&nbsp &nbsp  
+  <input type="radio" id="3" name="nps" value="3">
+  <label class="button" for="3">3</label>&nbsp &nbsp<br><br>
 	<br> <label for="fname">How much money are you willing to
-		spend total?<br>(Please enter in dollar and cents format)
-	</label><br> <input type="text" id="amount" name="amount" value=""><br>
+		spend total?<br>(Please enter in dollars; min 1 USD)
+	</label><br> <input type="number" min=1 id="amount" name="amount" value="10"><br>
 	<br>
 	<br>
+	<button type="submit" value="SUBMIT" name="s">Proceed to donate</button>
+	</form>
 
 	<div class="motivation" style="max-width: 500px">
 		<img class="image"
@@ -61,7 +65,6 @@
 			style="width: 100%">
 	</div>
 	<h1 style="color: #DC143C;">Thank you for your contributions!</h1>
-	<button class="button2">Proceed to Checkout</button>
 	</body>
 </html>
 
